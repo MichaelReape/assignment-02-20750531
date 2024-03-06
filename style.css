@@ -1,0 +1,38 @@
+.circle {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border-color: black;
+  outline: 1px solid rgb(214, 211, 211);
+  outline-style: ridge;
+  outline-offset: -2px;
+}
+.circle-green {
+  top: 100px;
+  left: 100px;
+  background-color: green;
+}
+.circle-red {
+  background-color: red;
+}
+.circle-yellow {
+  background-color: yellow;
+}
+.circle-blue {
+  background-color: blue;
+}
+.circle-black {
+  height: 225px;
+  width: 225px;
+  background-color: black;
+}
+.circle-black-big {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: black;
+}
