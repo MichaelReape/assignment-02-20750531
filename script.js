@@ -10,10 +10,10 @@ function start_game(){
 }
 
 function dim_colors(){
-    document.getElementById("red").style.backgroundColor = "rgb(128, 59, 59)";
-    document.getElementById("yellow").style.backgroundColor = "rgb(254, 254, 140)";
-    document.getElementById("blue").style.backgroundColor = "#6969fd"
-    document.getElementById("green").style.backgroundColor ="#4b874b"
+    document.getElementById("red").style.backgroundColor = "#803b3b";
+    document.getElementById("yellow").style.backgroundColor = "#fefe8c";
+    document.getElementById("blue").style.backgroundColor = "#6969fd";
+    document.getElementById("green").style.backgroundColor ="#4b874b";
 }
 
 function random_color(){
@@ -23,12 +23,23 @@ function random_color(){
 }
 
 async function display_sequence(){
+    var time = 0;
+    if(sequence.length >= 13){
+        time = 400;
+    }else if (sequence.length >= 9){
+        time = 600;
+    }else if (sequence.length >= 5){
+        time = 800;
+    }else{
+        time = 1000;
+    }
     console.log("display sequence");
     for(let i = 0; i < sequence.length; i++){
         console.log(sequence[i] + " " + i);
         document.getElementById(sequence[i]).style.backgroundColor = sequence[i];
-        await delay(1000);
+        await delay(time);
         dim_colors();
+        await delay(time/4);
     }
     state = 1;
 }
@@ -37,7 +48,9 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
+
 function guess_color(color){
+    // highlight(color);
     if(state === 1 && userSequence.length === sequence.length-1){
         userSequence.push(color);
         state = 0;
@@ -46,6 +59,11 @@ function guess_color(color){
         userSequence.push(color);
     }
 }
+// async function highlight(color){
+//     document.getElementById(color).style.backgroundColor = color;
+//     await delay(100);
+//     dim_colors();
+//   }
 
 //probably should verify as clicking, then handle progressing better but works for now
 
@@ -79,3 +97,12 @@ function game_over(){
     document.getElementById("yellow").addEventListener("click", () => guess_color("yellow"));
     document.getElementById("blue").addEventListener("click", () => guess_color("blue"));
     document.getElementById("green").addEventListener("click", () => guess_color("green")); 
+
+    //to do
+    //the starting light changes red to green after 3 seconds
+    //5 second limit hmm some sort of time bomb maybe
+    //flash all 4 lights 5 times for end game and reset all arrays
+    //css requirements font and all that
+    //comments
+    //if there is time i need to make all time top score probably with a server or something
+    //fix the design a bit

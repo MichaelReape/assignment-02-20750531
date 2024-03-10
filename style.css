@@ -14,22 +14,22 @@
 .green {
   top: 200px;
   left: 200px;
-  background-color: green;
+  background-color: blue;
 }
 .red {
   bottom: 200px;
   right:200px;
-  background-color: red;
+  background-color: green;
 }
 .yellow {
   bottom: 200px;
   left: 200px;
-  background-color: yellow;
+  background-color: red;
 }
 .blue {
   top: 200px;
   right: 200px;
-  background-color: blue;
+  background-color: yellow;
 }
 .circle-black {
   height: 225px;
