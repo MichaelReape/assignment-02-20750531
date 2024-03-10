@@ -11,18 +11,24 @@
   outline-style: ridge;
   outline-offset: -2px;
 }
-.circle-green {
-  top: 100px;
-  left: 100px;
+.green {
+  top: 200px;
+  left: 200px;
   background-color: green;
 }
-.circle-red {
+.red {
+  bottom: 200px;
+  right:200px;
   background-color: red;
 }
-.circle-yellow {
+.yellow {
+  bottom: 200px;
+  left: 200px;
   background-color: yellow;
 }
-.circle-blue {
+.blue {
+  top: 200px;
+  right: 200px;
   background-color: blue;
 }
 .circle-black {
@@ -31,8 +37,14 @@
   background-color: black;
 }
 .circle-black-big {
-  position: relative;
+  position: absolute;
   height: 400px;
   width: 400px;
   background-color: black;
+  left: 300px;
+  top: 300px;
+}
+.start{
+  width: 40px;
+  height: 40px;
 }

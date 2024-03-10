@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simon Game</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    
   </head>
   <body>
     <div class="simon-game">
       <div class="circle circle-black-big">
         <div class="circle circle-black">
-          <div class="circle circle-green"></div>
+          <button class="circle green" id="green"></button>
         </div>
         <div class="circle circle-black">
-          <div class="circle circle-blue"></div>
+          <button class="circle blue" id="blue"></button>
         </div>
         <div class="circle circle-black">
-          <div class="circle circle-yellow"></div>
+          <button class="circle yellow" id="yellow"></button>
         </div>
         <div class="circle circle-black">
-          <div class="circle circle-red"></div>
+          <button class="circle red" id="red"></button>
         </div>
-        <div class="circle circle-black-big"></div>
       </div>
+      <button class="start" onclick="start_game()">Start</button>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
