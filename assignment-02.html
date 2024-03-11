@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="assignment-02.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="simon-game">
+      <div class="circle circle-black-big">
+        <div class="circle blue-background">
+          <button class="circle blue" id="blue"></button>
+        </div>
+        <div class="circle yellow-background">
+          <button class="circle yellow" id="yellow"></button>
+        </div>
+        <div class="circle red-background">
+          <button class="circle red" id="red"></button>
+        </div>
+        <div class="circle green-background">
+          <button class="circle green" id="green"></button>
+        </div>
+      </div>
+      <div class="display">
+        <button class="all-time" id="all-time"></button>
+        <button class="start" onclick="start_game()">START</button>
+        <button class="previous" id="previous"></button>
+      </div>
+      <div class="light" id="light"></div>
+    </div>
+    <script src="assignment-02.js"></script>
+  </body>
+</html>
